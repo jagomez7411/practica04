@@ -22,7 +22,27 @@ $(document).ready(function(e){
 		});//tap
 		
 		$('#izquierda').swipeleft(function(){
-			navigator.notification.alert("Deslizo a la izquierda",function(){"Practica4","Aceptar"});
+			navigator.notification.alert("Deslizó a la izquierda",function(){"Practica4","Aceptar"});
 			});//barrer izquierda
+			
+			
+			$('#derecha').swiperight(function(){
+				navigator.notification.confirm("¿Que quieres hacer?",function(opt){
+			switch(opt)
+			{
+			
+			case 'b1':
+			navigator.notification.beep(1);
+			break;
+			
+			case 'v1':
+			navigator.notification.vibrate(1000);
+			break;
+			}//switch opt
+				},"Practica4","Beep,Vibrar,Cancelar");//confirm
+				
+			});//barrer derecha
+			
+			
 	},false);//ready device
 });//document
