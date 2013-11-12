@@ -18,9 +18,11 @@ $(document).ready(function(e){
 			
 			
 			}
-			$('#izquierda').swipeleft(function(){
+			
+		});//tap
+		
+		$('#izquierda').swipeleft(function(){
 			navigator.notification.alert("Deslizo a la izquierda",function(){"Practica4","Aceptar"});
 			});//barrer izquierda
-		});//tap
-	},false);
+	},false);//ready device
 });//document
