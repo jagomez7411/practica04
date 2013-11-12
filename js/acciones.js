@@ -31,11 +31,11 @@ $(document).ready(function(e){
 			switch(opt)
 			{
 			
-			case 'b1':
+			case 1:
 			navigator.notification.beep(1);
 			break;
 			
-			case 'v1':
+			case 2:
 			navigator.notification.vibrate(1000);
 			break;
 			}//switch opt
